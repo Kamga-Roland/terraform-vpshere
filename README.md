@@ -46,7 +46,8 @@ ubuntu_name      = "ubuntu-template"
    packer build packer/ubuntu.json
 
 5. **Initialize Terraform**
-   ```bash terraform init
+   ```bash
+   terraform init
 
 6. **Validate configuration**
    ```bash
