@@ -49,14 +49,18 @@ ubuntu_name      = "ubuntu-template"
    ```bash terraform init
 
 6. **Validate configuration**
-   ```bash terraform validate
+   ```bash
+   terraform validate
 
 7. **Preview changes**
-    ```bash terraform plan
+    ```bash
+    terraform plan
 
 8. **Apply configuration**
-    ```bash terraform apply
+    ```bash
+    terraform apply
 
 9. **Destroy resources (optional)**
-    ```bash terraform destroy
+    ```bash
+    terraform destroy
 
