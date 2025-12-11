@@ -42,20 +42,26 @@ network_name     = "VM Network"
 ubuntu_name      = "ubuntu-template"
 
 3. **Build base image with Packer**
+   ```bash
 packer build packer/ubuntu.json
 
-4. **Initialize Terraform**
+5. **Initialize Terraform**
+   ```bash
 terraform init
 
-5. **Validate configuration**
+6. **Validate configuration**
+   ```bash
 terraform validate
 
-6. **Preview changes**
+7. **Preview changes**
+    ```bash
 terraform plan
 
-7. **Apply configuration**
+8. **Apply configuration**
+    ```bash
 terraform apply
 
-8. **Destroy resources (optional)**
+9. **Destroy resources (optional)**
+    ```bash
 terraform destroy
 
