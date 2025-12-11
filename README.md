@@ -1,3 +1,61 @@
-# Learn Terraform vSphere
+# Terraform vSphere VM Automation with Packer
 
-This repo is a companion repo to the [Manage VMs and Snapshots on vSphere](https://learn.hashicorp.com/tutorials/terraform/vsphere-provider?utm_source=WEBSITE&utm_medium=GITHUB)  learn guide.
+This repository contains Infrastructure as Code (IaC) for automating virtual machine provisioning on VMware vSphere using **Terraform** and **Packer**.  
+It enables consistent VM builds, rapid deployment, and simplified lifecycle management.
+
+---
+
+## 🚀 Features
+- Automated VM creation on vSphere with Terraform
+- Golden image building with Packer
+- Configurable CPU, memory, disk, and network settings
+- Support for cloning from templates
+- Easy customization via variables
+
+---
+
+## 📦 Prerequisites
+- [Terraform](https://developer.hashicorp.com/terraform/downloads) >= 1.0
+- [Packer](https://developer.hashicorp.com/packer/downloads)
+- VMware vSphere environment (vCenter + ESXi)
+- vSphere credentials with sufficient permissions
+- Access to a datastore and network in vSphere
+
+---
+
+## ⚙️ Setup
+
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/your-org/terraform-vsphere-vm-automation.git
+   cd terraform-vsphere-vm-automation
+vsphere_user     = "administrator@vsphere.local"
+vsphere_password = "yourpassword"
+vsphere_server   = "vcenter.example.com"
+
+2. **Configure variables
+Create or edit terraform.tfvars:**
+datacenter_name  = "Datacenter"
+cluster_name     = "Cluster"
+datastore_name   = "Datastore"
+network_name     = "VM Network"
+ubuntu_name      = "ubuntu-template"
+
+3. **Build base image with Packer**
+packer build packer/ubuntu.json
+
+4. **Initialize Terraform**
+terraform init
+
+5. **Validate configuration**
+terraform validate
+
+6. **Preview changes**
+terraform plan
+
+7. **Apply configuration**
+terraform apply
+
+8. **Destroy resources (optional)**
+terraform destroy
+
