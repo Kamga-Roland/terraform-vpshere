@@ -49,7 +49,7 @@ source "vsphere-iso" "this" {
     disk_thin_provisioned = true
   }
 
-  iso_paths = ["[DS3 - Ing1] VM INFR Kamga/ISOs/ubuntu-24.04.3-live-server-amd64.iso"]
+  iso_paths = ["[ISO] ubuntu-22.04.1-live-server-amd64.iso"]
 
   network_adapters {
     network = var.network_name
